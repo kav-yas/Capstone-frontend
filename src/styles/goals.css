@@ -1,0 +1,146 @@
+.goals-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔹 Create New Goal */
+  .goal-create {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .goal-create input,
+  .goal-create textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .goal-create button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .goal-create button:hover {
+    background: #218838;
+  }
+  
+  /* 🔹 Goals List */
+  .goal-list {
+    margin-top: 20px;
+  }
+  
+  .goal-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .goal-item h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .goal-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .goal-item button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .goal-item button:hover {
+    background: #0056b3;
+  }
+  
+  /* 🔹 Progress Input */
+  .goal-item input {
+    width: 60px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* 🔹 Complete & Delete Buttons */
+  .goal-item .complete {
+    background: #ffc107;
+  }
+  
+  .goal-item .complete:hover {
+    background: #e0a800;
+  }
+  
+  .goal-item .delete {
+    background: #dc3545;
+  }
+  
+  .goal-item .delete:hover {
+    background: #c82333;
+  }
+  
+  /* 🔹 Goal Details */
+  .goal-details {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .goal-details h3 {
+    color: #333;
+  }
+  
+  .goal-details p {
+    color: #555;
+  }
+  
+  .goal-details button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .goal-details button:hover {
+    background: #5a6268;
+  }
+  

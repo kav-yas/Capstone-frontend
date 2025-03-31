@@ -1,0 +1,53 @@
+/* Make the container take up almost the full height */
+.community-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh; /* Almost full height */
+    padding: 30px; /* Increased padding */
+}
+
+/* Make the card significantly larger */
+.community-card {
+    text-align: center;
+    padding: 40px; /* More padding for a grand look */
+    width: 100%;
+    max-width: 700px; /* Increased width */
+    border-radius: 20px; /* More rounded for a premium feel */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Slight scale-up effect on hover */
+.community-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Increase title size and spacing */
+.community-title {
+    font-size: 32px; /* Bigger font size */
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Improve list styling */
+.community-list {
+    padding: 0;
+}
+
+/* Make list items larger and more visually engaging */
+.community-item {
+    padding: 18px; /* Bigger padding */
+    font-size: 22px; /* Increased font size */
+    font-weight: 700;
+    text-align: center;
+    border-radius: 12px; /* Smoother edges */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Enhance hover effect */
+.community-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}

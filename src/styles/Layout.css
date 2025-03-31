@@ -1,0 +1,118 @@
+/* 🔹 Global Styles - Smooth UI */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Layout Container */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f6f9; /* Light modern background */
+}
+
+/* 🔹 Navbar Styles */
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #2c3e50; /* Dark modern blue */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #34495e, #2c3e50); /* Gradient for modern feel */
+  padding-top: 60px;
+  padding-left: 20px;
+  overflow-y: auto;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease-in-out;
+}
+
+/* 🔹 Sidebar Links */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: #ecf0f1;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* 🔹 Main Content */
+.main-content {
+  margin-left: 260px;
+  padding: 30px;
+  flex: 1;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* 🔹 Content Wrapper */
+.content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* Prevents footer from overlapping */
+}
+
+/* 🔹 Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

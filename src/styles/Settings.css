@@ -1,0 +1,50 @@
+/* Settings page layout */
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 100px;
+}
+
+/* Settings card */
+.settings-card {
+    width: 100%;
+    max-width: 500px; /* Keeps it compact like app settings */
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add a hover effect for a modern feel */
+.settings-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styling */
+.settings-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for form switches */
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Customize switches */
+.form-switch {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Spacing for a cleaner look */
+.form-check {
+    padding: 10px;
+}

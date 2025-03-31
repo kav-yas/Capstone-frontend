@@ -1,0 +1,62 @@
+/* Centering the content */
+.notifications-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  /* Notification Box */
+  .notifications-content {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Title Styling */
+  .notifications-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+  
+  /* List Group Styling */
+  .notifications-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Individual Notification Items */
+  .notifications-item {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+  }
+  
+  .notifications-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
