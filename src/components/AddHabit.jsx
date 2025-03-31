@@ -3,21 +3,22 @@ import axios from "axios";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 
 const AddHabit = () => {
-  const [habit, setHabit] = useState("");
-  const [activityType, setActivityType] = useState("health");
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
-  const [message, setMessage] = useState(null);
-  const [completed, setCompleted] = useState(false); // New state to track if the habit is completed
+  const [habit, setHabit] = useState(""); // State for habit name
+  const [activityType, setActivityType] = useState("health"); // Default activity type is 'health'
+  const [startTime, setStartTime] = useState(""); // State for start time
+  const [endTime, setEndTime] = useState(""); // State for end time
+  const [message, setMessage] = useState(null); // State to manage messages
+  const [completed, setCompleted] = useState(false); // State to track habit completion
 
+  // Handle form submission for adding a new habit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const username = localStorage.getItem("username"); // Get username from storage
+    const username = localStorage.getItem("username"); // Get username from local storage
 
     if (!username) {
       setMessage({ type: "danger", text: "User not logged in! Please log in first." });
-      return; // Stop if no username
+      return; 
     }
 
     const habitData = {
@@ -33,13 +34,14 @@ const AddHabit = () => {
       setHabit("");
       setStartTime("");
       setEndTime("");
-      setCompleted(false); // Reset completed status on new habit
+      setCompleted(false); 
     } catch (error) {
       setMessage({ type: "danger", text: error.response?.data?.message || "Failed to add habit." });
       console.error("Error:", error);
     }
   };
 
+  // Handle habit completion action
   const handleComplete = async () => {
     const username = localStorage.getItem("username");
     const habitData = {
@@ -50,9 +52,9 @@ const AddHabit = () => {
     };
 
     try {
-      // Mark habit as complete regardless of time
+      // Mark habit as complete
       await axios.post(`http://localhost:8080/activity/complete/${username}`, habitData);
-      setCompleted(true); // Mark the habit as completed
+      setCompleted(true); 
       setMessage({ type: "success", text: `Habit "${habit}" completed successfully!` });
     } catch (error) {
       setMessage({ type: "danger", text: error.response?.data?.message || "Failed to mark as complete." });
@@ -113,7 +115,7 @@ const AddHabit = () => {
         </Button>
       </Form>
 
-      {/* Show 'Complete Habit' button after the habit is added */}
+      {/* Display 'Complete Habit' button once habit is added */}
       {habit && !completed && (
         <Button className="mt-3" variant="success" onClick={handleComplete}>
           ✅ Complete Habit
